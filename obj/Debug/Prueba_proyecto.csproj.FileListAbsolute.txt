@@ -1,0 +1,15 @@
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\bin\Debug\Prueba_proyecto.exe.config
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\bin\Debug\Prueba_proyecto.exe
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\bin\Debug\Prueba_proyecto.pdb
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.csprojAssemblyReference.cache
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.Properties.Resources.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.csproj.GenerateResource.cache
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.exe
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.pdb
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.V_MENU.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.V_VENTAS.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.V_DEUDORES.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.NuevoCliente.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.Deudas_Cliente_Seleccionado.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\Prueba_proyecto\Prueba_proyecto\obj\Debug\Prueba_proyecto.Agregar_Producto.resources
