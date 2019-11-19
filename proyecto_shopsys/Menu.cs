@@ -168,7 +168,7 @@ namespace proyecto_shopsys
 
         private void BotónAgregarProducto_Click(object sender, EventArgs e)
         {
-            agregarProducto(numericCantidad, numericIDVenta, TBProductos, TBCantidad, TBSubtotal, true);
+            agregarProducto(numericCantidad, numericIDVenta, TBProductos, TBCantidad, TBSubtotal, "VENTA");
             actualizarTotal(TBTotal);
             refreshNumeric(numericIDVenta, numericCantidad);
         }
@@ -281,6 +281,7 @@ namespace proyecto_shopsys
             Lcambio.Text = "$0.00";
             TBPagoRecibido.Text = "";
             BotónCancelarVenta.Enabled = false;
+            refreshView("VINVENTARIO", dataGridView1);
 
         }
 
@@ -415,6 +416,7 @@ namespace proyecto_shopsys
             TBCantidadCompra.Text = "";
             TBProductosCompra.Text = "";
             TBSubtotalCompra.Text = "";
+            TBTotalCompra.Text = "";
         }
 
         private void disableCompra()
@@ -445,23 +447,23 @@ namespace proyecto_shopsys
 
         private void BotónAgregarProductoCompra_Click(object sender, EventArgs e)
         {
-            agregarProducto(numericCantidadCompra, numericIDCompra, TBProductosCompra, TBCantidadCompra, TBSubtotalCompra, false);
+            agregarProducto(numericCantidadCompra, numericIDCompra, TBProductosCompra, TBCantidadCompra, TBSubtotalCompra, "COMPRA");
             actualizarTotal(TBTotalCompra);
             refreshNumeric(numericIDCompra, numericCantidadCompra);
         }
 
-        private void agregarProducto(NumericUpDown nCantidad, NumericUpDown nIDProducto, TextBox tbProductos, TextBox tbCantidad, TextBox tbSubtotal, bool venta)
+        private void agregarProducto(NumericUpDown nCantidad, NumericUpDown nIDProducto, TextBox tbProductos, TextBox tbCantidad, TextBox tbSubtotal, string tipo)
         {
             int cantidad = int.Parse(nCantidad.Value.ToString());
             int IDProducto = int.Parse(nIDProducto.Value.ToString());
             string producto = GetInfoProducto(IDProducto);
-            float subtotal = GetSubTotalProducto(IDProducto, cantidad, "COMPRA");
+            float subtotal = GetSubTotalProducto(IDProducto, cantidad, tipo);
             if (producto.Substring(0, 5) == "Error")
             {
                 MessageBox.Show(producto);
                 return;
             }
-            else if (GetCantidadProducto(IDProducto) < cantidad && venta)
+            else if (GetCantidadProducto(IDProducto) < cantidad && tipo == "VENTA")
             {
                 MessageBox.Show("No hay suficientes elementos en el inventario...");
                 return;
@@ -475,6 +477,8 @@ namespace proyecto_shopsys
         private void BotónFinalizarCompra_Click_1(object sender, EventArgs e)
         {
             compra.realizarTransaccion("COMPRA");
+            refreshCompra();
+            disableCompra();
         }
 
         private void BotónCancelarVenta_Click(object sender, EventArgs e)
