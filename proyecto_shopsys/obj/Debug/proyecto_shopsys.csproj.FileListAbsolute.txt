@@ -1,0 +1,24 @@
+C:\Users\ozymandias\source\repos\proyecto_shopsys\bin\Debug\proyecto_shopsys.exe.config
+C:\Users\ozymandias\source\repos\proyecto_shopsys\bin\Debug\proyecto_shopsys.exe
+C:\Users\ozymandias\source\repos\proyecto_shopsys\bin\Debug\proyecto_shopsys.pdb
+C:\Users\ozymandias\source\repos\proyecto_shopsys\obj\Debug\proyecto_shopsys.csprojAssemblyReference.cache
+C:\Users\ozymandias\source\repos\proyecto_shopsys\obj\Debug\proyecto_shopsys.Form1.resources
+C:\Users\ozymandias\source\repos\proyecto_shopsys\obj\Debug\proyecto_shopsys.Properties.Resources.resources
+C:\Users\ozymandias\source\repos\proyecto_shopsys\obj\Debug\proyecto_shopsys.csproj.GenerateResource.cache
+C:\Users\ozymandias\source\repos\proyecto_shopsys\obj\Debug\proyecto_shopsys.exe
+C:\Users\ozymandias\source\repos\proyecto_shopsys\obj\Debug\proyecto_shopsys.pdb
+C:\Users\ozymandias\source\repos\proyecto_shopsys\obj\Debug\proyecto_shopsys.Form2.resources
+C:\Users\ozymandias\source\repos\proyecto_shopsys\obj\Debug\proyecto_shopsys.Form3.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\bin\Debug\proyecto_shopsys.exe.config
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\bin\Debug\proyecto_shopsys.exe
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\bin\Debug\proyecto_shopsys.pdb
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.csprojAssemblyReference.cache
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.Form3.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.Properties.Resources.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.csproj.GenerateResource.cache
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.exe
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.pdb
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.Menu.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.Agregar_Producto.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.Deudas_Cliente_Seleccionado.resources
