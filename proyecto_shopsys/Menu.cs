@@ -17,6 +17,15 @@ namespace proyecto_shopsys
         public Menu()
         {
             InitializeComponent();
+            BotónBuscarFecha.PerformClick();
+        }
+
+        private void setIdioma(SqlConnection conn, string idioma)
+        {
+            string list = $"set language '{idioma}'";
+            SqlCommand cmd = new SqlCommand(list, conn);
+            cmd.ExecuteNonQuery();
+                
         }
 
         private void searchTable(string table, string extraQuery, DataGridView grid)
@@ -47,6 +56,21 @@ namespace proyecto_shopsys
             }
         }
 
+        private void searchView(string view, string whereQuery, DataGridView grid, string idioma)
+        {
+            using (SqlConnection conn = new SqlConnection("Data Source=LENOVO-ELISEO\\SQLEXPRESS;Initial Catalog=DB_TIENDA;Integrated Security=True"))
+            {
+                conn.Open();
+                setIdioma(conn, idioma);
+                string list = $"select * from {view} {whereQuery}";
+                SqlDataAdapter dataadapter = new SqlDataAdapter(list, conn);
+                DataSet ds = new DataSet();
+                dataadapter.Fill(ds);
+                grid.DataSource = ds.Tables[0];
+                conn.Close();
+            }
+        }
+
         private void searchView(string view, string selectQuery, string whereQuery, DataGridView grid)
         {
             using (SqlConnection conn = new SqlConnection("Data Source=LENOVO-ELISEO\\SQLEXPRESS;Initial Catalog=DB_TIENDA;Integrated Security=True"))
@@ -64,6 +88,11 @@ namespace proyecto_shopsys
         private void refreshView(string view, DataGridView grid)
         {
             searchView(view, "", grid);
+        }
+
+        private void refreshView(string view, DataGridView grid, string idioma)
+        {
+            searchView(view, "", grid, idioma);
         }
 
         private int validar_id_persona(int ID, string persona)
@@ -88,6 +117,10 @@ namespace proyecto_shopsys
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dB_TIENDADataSet.VVENTAS_DIA' Puede moverla o quitarla según sea necesario.
+            this.vVENTAS_DIATableAdapter.Fill(this.dB_TIENDADataSet.VVENTAS_DIA);
+            // TODO: esta línea de código carga datos en la tabla 'dB_TIENDADataSet.VVENTAS' Puede moverla o quitarla según sea necesario.
+            this.vVENTASTableAdapter.Fill(this.dB_TIENDADataSet.VVENTAS);
             // TODO: esta línea de código carga datos en la tabla 'dB_TIENDADataSet.VCLIENTES' Puede moverla o quitarla según sea necesario.
             this.vCLIENTESTableAdapter.Fill(this.dB_TIENDADataSet.VCLIENTES);
             // TODO: esta línea de código carga datos en la tabla 'dB_TIENDADataSet.TBL_VENTAS' Puede moverla o quitarla según sea necesario.
@@ -136,7 +169,7 @@ namespace proyecto_shopsys
                 totalRecibido = float.Parse(TBPagoRecibido.Text);
                 cambio = totalRecibido - total;
                 Lcambio.Text = "$" + cambio.ToString();
-                BotónFinalizarVenta.Enabled = true;
+                BotonFinalizarVenta.Enabled = true;
             }
             catch (FormatException error)
             {
@@ -260,7 +293,7 @@ namespace proyecto_shopsys
 
         private void refreshVenta()
         {
-            BotónFinalizarVenta.Enabled = false;
+            BotonFinalizarVenta.Enabled = false;
             BotónAgregarProducto.Enabled = false;
             TBPagoRecibido.Enabled = false;
             checkBoxDeuda.Enabled = false;
@@ -490,6 +523,84 @@ namespace proyecto_shopsys
         {
             NuevoCliente form = new NuevoCliente();
             form.Show();
+        }
+
+        private void BotónBuscarFecha_Click(object sender, EventArgs e)
+        {
+            string extraQuery = $"where FECHA = '{datePicker.Value.ToString("yyyy'-'MM'-'dd")}'";
+            searchView("VVENTAS", extraQuery, gridVentasDia);
+        }
+
+        private void RBMes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBMes.Checked)
+            {
+                panelVentas.Tag = RBMes.Tag;
+                comboMes.Enabled = false;
+                BotónBuscarVentasMes.Enabled = false;
+            }
+            else
+            {
+                panelVentas.Tag = RBDia.Tag;
+                comboMes.Enabled = true;
+                BotónBuscarVentasMes.Enabled = true;
+            }
+            refreshView($"VVENTAS_{panelVentas.Tag.ToString()}", gridVentasMes, "spanish");
+        }
+
+
+
+        private void BuscarVentasMes_Click(object sender, EventArgs e)
+        {
+            string query = $"where Mes = '{comboMes.Text}' order by dia";
+            gridVentasMes.Refresh();
+            searchView($"VVENTAS_{panelVentas.Tag.ToString()}",query , gridVentasMes, "spanish");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ventanaEliminar ventana = new ventanaEliminar();
+            ventana.Show();
+        }
+
+        private void BotónInicio_Click(object sender, EventArgs e)
+        {
+            if (TBInicio.Text != "")
+            {
+                string extraQuery = $"where lower(cproducto) like '{TBInicio.Text.ToLower()}%'";
+                searchView("VINVENTARIO", extraQuery, dataGridView1);
+            }
+        }
+
+        private void BotónActualizarInicio_Click(object sender, EventArgs e)
+        {
+            refreshView("VINVENTARIO", dataGridView1);
+            TBInicio.Text = "";
+        }
+
+        private void RBDia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBMes.Checked)
+            {
+                panelVentas.Tag = RBMes.Tag;
+                comboMes.Enabled = false;
+                BotónBuscarVentasMes.Enabled = false;
+            }
+            else
+            {
+                panelVentas.Tag = RBDia.Tag;
+                comboMes.Enabled = true;
+                BotónBuscarVentasMes.Enabled = true;
+            }
+            refreshView($"VVENTAS_{panelVentas.Tag.ToString()}", gridVentasMes, "spanish");
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedIndex == 4)
+            {
+                BotónBuscarFecha.PerformClick();
+            }
         }
     }
 }

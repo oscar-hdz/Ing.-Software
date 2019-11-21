@@ -803,6 +803,41 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VVENTAS_DIATableAdapter" GeneratorDataComponentClassName="VVENTAS_DIATableAdapter" Name="VVENTAS_DIA" UserDataComponentName="VVENTAS_DIATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBConnectionString (Settings)" DbObjectName="DB_TIENDA.dbo.VVENTAS_DIA" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DIA, MES, VENTAS FROM dbo.VVENTAS_DIA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DIA" DataSetColumn="DIA" />
+              <Mapping SourceColumn="MES" DataSetColumn="MES" />
+              <Mapping SourceColumn="VENTAS" DataSetColumn="VENTAS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VVENTAS_MESTableAdapter" GeneratorDataComponentClassName="VVENTAS_MESTableAdapter" Name="VVENTAS_MES" UserDataComponentName="VVENTAS_MESTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBConnectionString (Settings)" DbObjectName="DB_TIENDA.dbo.VVENTAS_MES" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MES, VENTAS FROM dbo.VVENTAS_MES</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MES" DataSetColumn="MES" />
+              <Mapping SourceColumn="VENTAS" DataSetColumn="VENTAS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources>
           <DbSource ConnectionRef="DBConnectionString (Settings)" DbObjectName="DB_TIENDA.dbo.SPD_COMPRA_PRODUCTO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="SPD_COMPRA_PRODUCTO" MethodsParameterType="CLR" Modifier="Public" Name="SPD_COMPRA_PRODUCTO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SPD_COMPRA_PRODUCTO">
@@ -1061,7 +1096,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
   <xs:element name="DB_TIENDADataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DB_TIENDADataSet" msprop:Generator_UserDSName="DB_TIENDADataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CAT_CLIENTES" msprop:Generator_TableClassName="CAT_CLIENTESDataTable" msprop:Generator_TableVarName="tableCAT_CLIENTES" msprop:Generator_RowChangedName="CAT_CLIENTESRowChanged" msprop:Generator_TablePropName="CAT_CLIENTES" msprop:Generator_RowDeletingName="CAT_CLIENTESRowDeleting" msprop:Generator_RowChangingName="CAT_CLIENTESRowChanging" msprop:Generator_RowEvHandlerName="CAT_CLIENTESRowChangeEventHandler" msprop:Generator_RowDeletedName="CAT_CLIENTESRowDeleted" msprop:Generator_RowClassName="CAT_CLIENTESRow" msprop:Generator_UserTableName="CAT_CLIENTES" msprop:Generator_RowEvArgName="CAT_CLIENTESRowChangeEvent">
+        <xs:element name="CAT_CLIENTES" msprop:Generator_TableClassName="CAT_CLIENTESDataTable" msprop:Generator_TableVarName="tableCAT_CLIENTES" msprop:Generator_TablePropName="CAT_CLIENTES" msprop:Generator_RowDeletingName="CAT_CLIENTESRowDeleting" msprop:Generator_RowChangingName="CAT_CLIENTESRowChanging" msprop:Generator_RowEvHandlerName="CAT_CLIENTESRowChangeEventHandler" msprop:Generator_RowDeletedName="CAT_CLIENTESRowDeleted" msprop:Generator_UserTableName="CAT_CLIENTES" msprop:Generator_RowChangedName="CAT_CLIENTESRowChanged" msprop:Generator_RowEvArgName="CAT_CLIENTESRowChangeEvent" msprop:Generator_RowClassName="CAT_CLIENTESRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NID_CLIENTE" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNID_CLIENTE" msprop:Generator_ColumnPropNameInRow="NID_CLIENTE" msprop:Generator_ColumnPropNameInTable="NID_CLIENTEColumn" msprop:Generator_UserColumnName="NID_CLIENTE" type="xs:int" />
@@ -1106,7 +1141,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CAT_COMPAÑIAS" msprop:Generator_TableClassName="CAT_COMPAÑIASDataTable" msprop:Generator_TableVarName="tableCAT_COMPAÑIAS" msprop:Generator_RowChangedName="CAT_COMPAÑIASRowChanged" msprop:Generator_TablePropName="CAT_COMPAÑIAS" msprop:Generator_RowDeletingName="CAT_COMPAÑIASRowDeleting" msprop:Generator_RowChangingName="CAT_COMPAÑIASRowChanging" msprop:Generator_RowEvHandlerName="CAT_COMPAÑIASRowChangeEventHandler" msprop:Generator_RowDeletedName="CAT_COMPAÑIASRowDeleted" msprop:Generator_RowClassName="CAT_COMPAÑIASRow" msprop:Generator_UserTableName="CAT_COMPAÑIAS" msprop:Generator_RowEvArgName="CAT_COMPAÑIASRowChangeEvent">
+        <xs:element name="CAT_COMPAÑIAS" msprop:Generator_TableClassName="CAT_COMPAÑIASDataTable" msprop:Generator_TableVarName="tableCAT_COMPAÑIAS" msprop:Generator_TablePropName="CAT_COMPAÑIAS" msprop:Generator_RowDeletingName="CAT_COMPAÑIASRowDeleting" msprop:Generator_RowChangingName="CAT_COMPAÑIASRowChanging" msprop:Generator_RowEvHandlerName="CAT_COMPAÑIASRowChangeEventHandler" msprop:Generator_RowDeletedName="CAT_COMPAÑIASRowDeleted" msprop:Generator_UserTableName="CAT_COMPAÑIAS" msprop:Generator_RowChangedName="CAT_COMPAÑIASRowChanged" msprop:Generator_RowEvArgName="CAT_COMPAÑIASRowChangeEvent" msprop:Generator_RowClassName="CAT_COMPAÑIASRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NID_COMPAÑIA" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNID_COMPAÑIA" msprop:Generator_ColumnPropNameInRow="NID_COMPAÑIA" msprop:Generator_ColumnPropNameInTable="NID_COMPAÑIAColumn" msprop:Generator_UserColumnName="NID_COMPAÑIA" type="xs:int" />
@@ -1123,7 +1158,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CAT_PROVEEDORES" msprop:Generator_TableClassName="CAT_PROVEEDORESDataTable" msprop:Generator_TableVarName="tableCAT_PROVEEDORES" msprop:Generator_RowChangedName="CAT_PROVEEDORESRowChanged" msprop:Generator_TablePropName="CAT_PROVEEDORES" msprop:Generator_RowDeletingName="CAT_PROVEEDORESRowDeleting" msprop:Generator_RowChangingName="CAT_PROVEEDORESRowChanging" msprop:Generator_RowEvHandlerName="CAT_PROVEEDORESRowChangeEventHandler" msprop:Generator_RowDeletedName="CAT_PROVEEDORESRowDeleted" msprop:Generator_RowClassName="CAT_PROVEEDORESRow" msprop:Generator_UserTableName="CAT_PROVEEDORES" msprop:Generator_RowEvArgName="CAT_PROVEEDORESRowChangeEvent">
+        <xs:element name="CAT_PROVEEDORES" msprop:Generator_TableClassName="CAT_PROVEEDORESDataTable" msprop:Generator_TableVarName="tableCAT_PROVEEDORES" msprop:Generator_TablePropName="CAT_PROVEEDORES" msprop:Generator_RowDeletingName="CAT_PROVEEDORESRowDeleting" msprop:Generator_RowChangingName="CAT_PROVEEDORESRowChanging" msprop:Generator_RowEvHandlerName="CAT_PROVEEDORESRowChangeEventHandler" msprop:Generator_RowDeletedName="CAT_PROVEEDORESRowDeleted" msprop:Generator_UserTableName="CAT_PROVEEDORES" msprop:Generator_RowChangedName="CAT_PROVEEDORESRowChanged" msprop:Generator_RowEvArgName="CAT_PROVEEDORESRowChangeEvent" msprop:Generator_RowClassName="CAT_PROVEEDORESRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NID_PROVEEDOR" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNID_PROVEEDOR" msprop:Generator_ColumnPropNameInRow="NID_PROVEEDOR" msprop:Generator_ColumnPropNameInTable="NID_PROVEEDORColumn" msprop:Generator_UserColumnName="NID_PROVEEDOR" type="xs:int" />
@@ -1161,7 +1196,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CAT_TIPO_PRODUCTOS" msprop:Generator_TableClassName="CAT_TIPO_PRODUCTOSDataTable" msprop:Generator_TableVarName="tableCAT_TIPO_PRODUCTOS" msprop:Generator_RowChangedName="CAT_TIPO_PRODUCTOSRowChanged" msprop:Generator_TablePropName="CAT_TIPO_PRODUCTOS" msprop:Generator_RowDeletingName="CAT_TIPO_PRODUCTOSRowDeleting" msprop:Generator_RowChangingName="CAT_TIPO_PRODUCTOSRowChanging" msprop:Generator_RowEvHandlerName="CAT_TIPO_PRODUCTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="CAT_TIPO_PRODUCTOSRowDeleted" msprop:Generator_RowClassName="CAT_TIPO_PRODUCTOSRow" msprop:Generator_UserTableName="CAT_TIPO_PRODUCTOS" msprop:Generator_RowEvArgName="CAT_TIPO_PRODUCTOSRowChangeEvent">
+        <xs:element name="CAT_TIPO_PRODUCTOS" msprop:Generator_TableClassName="CAT_TIPO_PRODUCTOSDataTable" msprop:Generator_TableVarName="tableCAT_TIPO_PRODUCTOS" msprop:Generator_TablePropName="CAT_TIPO_PRODUCTOS" msprop:Generator_RowDeletingName="CAT_TIPO_PRODUCTOSRowDeleting" msprop:Generator_RowChangingName="CAT_TIPO_PRODUCTOSRowChanging" msprop:Generator_RowEvHandlerName="CAT_TIPO_PRODUCTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="CAT_TIPO_PRODUCTOSRowDeleted" msprop:Generator_UserTableName="CAT_TIPO_PRODUCTOS" msprop:Generator_RowChangedName="CAT_TIPO_PRODUCTOSRowChanged" msprop:Generator_RowEvArgName="CAT_TIPO_PRODUCTOSRowChangeEvent" msprop:Generator_RowClassName="CAT_TIPO_PRODUCTOSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NID_TIPO_PRODUCTO" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNID_TIPO_PRODUCTO" msprop:Generator_ColumnPropNameInRow="NID_TIPO_PRODUCTO" msprop:Generator_ColumnPropNameInTable="NID_TIPO_PRODUCTOColumn" msprop:Generator_UserColumnName="NID_TIPO_PRODUCTO" type="xs:int" />
@@ -1178,7 +1213,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TBL_COMPRAS" msprop:Generator_TableClassName="TBL_COMPRASDataTable" msprop:Generator_TableVarName="tableTBL_COMPRAS" msprop:Generator_RowChangedName="TBL_COMPRASRowChanged" msprop:Generator_TablePropName="TBL_COMPRAS" msprop:Generator_RowDeletingName="TBL_COMPRASRowDeleting" msprop:Generator_RowChangingName="TBL_COMPRASRowChanging" msprop:Generator_RowEvHandlerName="TBL_COMPRASRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_COMPRASRowDeleted" msprop:Generator_RowClassName="TBL_COMPRASRow" msprop:Generator_UserTableName="TBL_COMPRAS" msprop:Generator_RowEvArgName="TBL_COMPRASRowChangeEvent">
+        <xs:element name="TBL_COMPRAS" msprop:Generator_TableClassName="TBL_COMPRASDataTable" msprop:Generator_TableVarName="tableTBL_COMPRAS" msprop:Generator_TablePropName="TBL_COMPRAS" msprop:Generator_RowDeletingName="TBL_COMPRASRowDeleting" msprop:Generator_RowChangingName="TBL_COMPRASRowChanging" msprop:Generator_RowEvHandlerName="TBL_COMPRASRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_COMPRASRowDeleted" msprop:Generator_UserTableName="TBL_COMPRAS" msprop:Generator_RowChangedName="TBL_COMPRASRowChanged" msprop:Generator_RowEvArgName="TBL_COMPRASRowChangeEvent" msprop:Generator_RowClassName="TBL_COMPRASRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NID_COMPRA" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNID_COMPRA" msprop:Generator_ColumnPropNameInRow="NID_COMPRA" msprop:Generator_ColumnPropNameInTable="NID_COMPRAColumn" msprop:Generator_UserColumnName="NID_COMPRA" type="xs:int" />
@@ -1191,7 +1226,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TBL_MARCAS" msprop:Generator_TableClassName="TBL_MARCASDataTable" msprop:Generator_TableVarName="tableTBL_MARCAS" msprop:Generator_RowChangedName="TBL_MARCASRowChanged" msprop:Generator_TablePropName="TBL_MARCAS" msprop:Generator_RowDeletingName="TBL_MARCASRowDeleting" msprop:Generator_RowChangingName="TBL_MARCASRowChanging" msprop:Generator_RowEvHandlerName="TBL_MARCASRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_MARCASRowDeleted" msprop:Generator_RowClassName="TBL_MARCASRow" msprop:Generator_UserTableName="TBL_MARCAS" msprop:Generator_RowEvArgName="TBL_MARCASRowChangeEvent">
+        <xs:element name="TBL_MARCAS" msprop:Generator_TableClassName="TBL_MARCASDataTable" msprop:Generator_TableVarName="tableTBL_MARCAS" msprop:Generator_TablePropName="TBL_MARCAS" msprop:Generator_RowDeletingName="TBL_MARCASRowDeleting" msprop:Generator_RowChangingName="TBL_MARCASRowChanging" msprop:Generator_RowEvHandlerName="TBL_MARCASRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_MARCASRowDeleted" msprop:Generator_UserTableName="TBL_MARCAS" msprop:Generator_RowChangedName="TBL_MARCASRowChanged" msprop:Generator_RowEvArgName="TBL_MARCASRowChangeEvent" msprop:Generator_RowClassName="TBL_MARCASRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NID_MARCA" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNID_MARCA" msprop:Generator_ColumnPropNameInRow="NID_MARCA" msprop:Generator_ColumnPropNameInTable="NID_MARCAColumn" msprop:Generator_UserColumnName="NID_MARCA" type="xs:int" />
@@ -1209,7 +1244,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TBL_PRODUCTOS" msprop:Generator_TableClassName="TBL_PRODUCTOSDataTable" msprop:Generator_TableVarName="tableTBL_PRODUCTOS" msprop:Generator_RowChangedName="TBL_PRODUCTOSRowChanged" msprop:Generator_TablePropName="TBL_PRODUCTOS" msprop:Generator_RowDeletingName="TBL_PRODUCTOSRowDeleting" msprop:Generator_RowChangingName="TBL_PRODUCTOSRowChanging" msprop:Generator_RowEvHandlerName="TBL_PRODUCTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_PRODUCTOSRowDeleted" msprop:Generator_RowClassName="TBL_PRODUCTOSRow" msprop:Generator_UserTableName="TBL_PRODUCTOS" msprop:Generator_RowEvArgName="TBL_PRODUCTOSRowChangeEvent">
+        <xs:element name="TBL_PRODUCTOS" msprop:Generator_TableClassName="TBL_PRODUCTOSDataTable" msprop:Generator_TableVarName="tableTBL_PRODUCTOS" msprop:Generator_TablePropName="TBL_PRODUCTOS" msprop:Generator_RowDeletingName="TBL_PRODUCTOSRowDeleting" msprop:Generator_RowChangingName="TBL_PRODUCTOSRowChanging" msprop:Generator_RowEvHandlerName="TBL_PRODUCTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_PRODUCTOSRowDeleted" msprop:Generator_UserTableName="TBL_PRODUCTOS" msprop:Generator_RowChangedName="TBL_PRODUCTOSRowChanged" msprop:Generator_RowEvArgName="TBL_PRODUCTOSRowChangeEvent" msprop:Generator_RowClassName="TBL_PRODUCTOSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NID_PRODUCTO" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNID_PRODUCTO" msprop:Generator_ColumnPropNameInRow="NID_PRODUCTO" msprop:Generator_ColumnPropNameInTable="NID_PRODUCTOColumn" msprop:Generator_UserColumnName="NID_PRODUCTO" type="xs:int" />
@@ -1244,7 +1279,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TBL_VENTAS" msprop:Generator_TableClassName="TBL_VENTASDataTable" msprop:Generator_TableVarName="tableTBL_VENTAS" msprop:Generator_RowChangedName="TBL_VENTASRowChanged" msprop:Generator_TablePropName="TBL_VENTAS" msprop:Generator_RowDeletingName="TBL_VENTASRowDeleting" msprop:Generator_RowChangingName="TBL_VENTASRowChanging" msprop:Generator_RowEvHandlerName="TBL_VENTASRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_VENTASRowDeleted" msprop:Generator_RowClassName="TBL_VENTASRow" msprop:Generator_UserTableName="TBL_VENTAS" msprop:Generator_RowEvArgName="TBL_VENTASRowChangeEvent">
+        <xs:element name="TBL_VENTAS" msprop:Generator_TableClassName="TBL_VENTASDataTable" msprop:Generator_TableVarName="tableTBL_VENTAS" msprop:Generator_TablePropName="TBL_VENTAS" msprop:Generator_RowDeletingName="TBL_VENTASRowDeleting" msprop:Generator_RowChangingName="TBL_VENTASRowChanging" msprop:Generator_RowEvHandlerName="TBL_VENTASRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_VENTASRowDeleted" msprop:Generator_UserTableName="TBL_VENTAS" msprop:Generator_RowChangedName="TBL_VENTASRowChanged" msprop:Generator_RowEvArgName="TBL_VENTASRowChangeEvent" msprop:Generator_RowClassName="TBL_VENTASRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NID_VENTA" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNID_VENTA" msprop:Generator_ColumnPropNameInRow="NID_VENTA" msprop:Generator_ColumnPropNameInTable="NID_VENTAColumn" msprop:Generator_UserColumnName="NID_VENTA" type="xs:int" />
@@ -1258,7 +1293,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VCLIENTES" msprop:Generator_TableClassName="VCLIENTESDataTable" msprop:Generator_TableVarName="tableVCLIENTES" msprop:Generator_RowChangedName="VCLIENTESRowChanged" msprop:Generator_TablePropName="VCLIENTES" msprop:Generator_RowDeletingName="VCLIENTESRowDeleting" msprop:Generator_RowChangingName="VCLIENTESRowChanging" msprop:Generator_RowEvHandlerName="VCLIENTESRowChangeEventHandler" msprop:Generator_RowDeletedName="VCLIENTESRowDeleted" msprop:Generator_RowClassName="VCLIENTESRow" msprop:Generator_UserTableName="VCLIENTES" msprop:Generator_RowEvArgName="VCLIENTESRowChangeEvent">
+        <xs:element name="VCLIENTES" msprop:Generator_TableClassName="VCLIENTESDataTable" msprop:Generator_TableVarName="tableVCLIENTES" msprop:Generator_TablePropName="VCLIENTES" msprop:Generator_RowDeletingName="VCLIENTESRowDeleting" msprop:Generator_RowChangingName="VCLIENTESRowChanging" msprop:Generator_RowEvHandlerName="VCLIENTESRowChangeEventHandler" msprop:Generator_RowDeletedName="VCLIENTESRowDeleted" msprop:Generator_UserTableName="VCLIENTES" msprop:Generator_RowChangedName="VCLIENTESRowChanged" msprop:Generator_RowEvArgName="VCLIENTESRowChangeEvent" msprop:Generator_RowClassName="VCLIENTESRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1286,7 +1321,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VCOMPRAS" msprop:Generator_TableClassName="VCOMPRASDataTable" msprop:Generator_TableVarName="tableVCOMPRAS" msprop:Generator_RowChangedName="VCOMPRASRowChanged" msprop:Generator_TablePropName="VCOMPRAS" msprop:Generator_RowDeletingName="VCOMPRASRowDeleting" msprop:Generator_RowChangingName="VCOMPRASRowChanging" msprop:Generator_RowEvHandlerName="VCOMPRASRowChangeEventHandler" msprop:Generator_RowDeletedName="VCOMPRASRowDeleted" msprop:Generator_RowClassName="VCOMPRASRow" msprop:Generator_UserTableName="VCOMPRAS" msprop:Generator_RowEvArgName="VCOMPRASRowChangeEvent">
+        <xs:element name="VCOMPRAS" msprop:Generator_TableClassName="VCOMPRASDataTable" msprop:Generator_TableVarName="tableVCOMPRAS" msprop:Generator_TablePropName="VCOMPRAS" msprop:Generator_RowDeletingName="VCOMPRASRowDeleting" msprop:Generator_RowChangingName="VCOMPRASRowChanging" msprop:Generator_RowEvHandlerName="VCOMPRASRowChangeEventHandler" msprop:Generator_RowDeletedName="VCOMPRASRowDeleted" msprop:Generator_UserTableName="VCOMPRAS" msprop:Generator_RowChangedName="VCOMPRASRowChanged" msprop:Generator_RowEvArgName="VCOMPRASRowChangeEvent" msprop:Generator_RowClassName="VCOMPRASRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PRODUCTO" msprop:Generator_ColumnVarNameInTable="columnPRODUCTO" msprop:Generator_ColumnPropNameInRow="PRODUCTO" msprop:Generator_ColumnPropNameInTable="PRODUCTOColumn" msprop:Generator_UserColumnName="PRODUCTO">
@@ -1315,7 +1350,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VCPRODUCTOS" msprop:Generator_TableClassName="VCPRODUCTOSDataTable" msprop:Generator_TableVarName="tableVCPRODUCTOS" msprop:Generator_RowChangedName="VCPRODUCTOSRowChanged" msprop:Generator_TablePropName="VCPRODUCTOS" msprop:Generator_RowDeletingName="VCPRODUCTOSRowDeleting" msprop:Generator_RowChangingName="VCPRODUCTOSRowChanging" msprop:Generator_RowEvHandlerName="VCPRODUCTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="VCPRODUCTOSRowDeleted" msprop:Generator_RowClassName="VCPRODUCTOSRow" msprop:Generator_UserTableName="VCPRODUCTOS" msprop:Generator_RowEvArgName="VCPRODUCTOSRowChangeEvent">
+        <xs:element name="VCPRODUCTOS" msprop:Generator_TableClassName="VCPRODUCTOSDataTable" msprop:Generator_TableVarName="tableVCPRODUCTOS" msprop:Generator_TablePropName="VCPRODUCTOS" msprop:Generator_RowDeletingName="VCPRODUCTOSRowDeleting" msprop:Generator_RowChangingName="VCPRODUCTOSRowChanging" msprop:Generator_RowEvHandlerName="VCPRODUCTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="VCPRODUCTOSRowDeleted" msprop:Generator_UserTableName="VCPRODUCTOS" msprop:Generator_RowChangedName="VCPRODUCTOSRowChanged" msprop:Generator_RowEvArgName="VCPRODUCTOSRowChangeEvent" msprop:Generator_RowClassName="VCPRODUCTOSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCPRODUCTO" msprop:Generator_ColumnPropNameInRow="CPRODUCTO" msprop:Generator_ColumnPropNameInTable="CPRODUCTOColumn" msprop:Generator_UserColumnName="CPRODUCTO">
@@ -1328,7 +1363,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VDEUDAS" msprop:Generator_TableClassName="VDEUDASDataTable" msprop:Generator_TableVarName="tableVDEUDAS" msprop:Generator_RowChangedName="VDEUDASRowChanged" msprop:Generator_TablePropName="VDEUDAS" msprop:Generator_RowDeletingName="VDEUDASRowDeleting" msprop:Generator_RowChangingName="VDEUDASRowChanging" msprop:Generator_RowEvHandlerName="VDEUDASRowChangeEventHandler" msprop:Generator_RowDeletedName="VDEUDASRowDeleted" msprop:Generator_RowClassName="VDEUDASRow" msprop:Generator_UserTableName="VDEUDAS" msprop:Generator_RowEvArgName="VDEUDASRowChangeEvent">
+        <xs:element name="VDEUDAS" msprop:Generator_TableClassName="VDEUDASDataTable" msprop:Generator_TableVarName="tableVDEUDAS" msprop:Generator_TablePropName="VDEUDAS" msprop:Generator_RowDeletingName="VDEUDASRowDeleting" msprop:Generator_RowChangingName="VDEUDASRowChanging" msprop:Generator_RowEvHandlerName="VDEUDASRowChangeEventHandler" msprop:Generator_RowDeletedName="VDEUDASRowDeleted" msprop:Generator_UserTableName="VDEUDAS" msprop:Generator_RowChangedName="VDEUDASRowChanged" msprop:Generator_RowEvArgName="VDEUDASRowChangeEvent" msprop:Generator_RowClassName="VDEUDASRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PRODUCTO" msprop:Generator_ColumnVarNameInTable="columnPRODUCTO" msprop:Generator_ColumnPropNameInRow="PRODUCTO" msprop:Generator_ColumnPropNameInTable="PRODUCTOColumn" msprop:Generator_UserColumnName="PRODUCTO">
@@ -1365,7 +1400,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VDEUDORES" msprop:Generator_TableClassName="VDEUDORESDataTable" msprop:Generator_TableVarName="tableVDEUDORES" msprop:Generator_RowChangedName="VDEUDORESRowChanged" msprop:Generator_TablePropName="VDEUDORES" msprop:Generator_RowDeletingName="VDEUDORESRowDeleting" msprop:Generator_RowChangingName="VDEUDORESRowChanging" msprop:Generator_RowEvHandlerName="VDEUDORESRowChangeEventHandler" msprop:Generator_RowDeletedName="VDEUDORESRowDeleted" msprop:Generator_RowClassName="VDEUDORESRow" msprop:Generator_UserTableName="VDEUDORES" msprop:Generator_RowEvArgName="VDEUDORESRowChangeEvent">
+        <xs:element name="VDEUDORES" msprop:Generator_TableClassName="VDEUDORESDataTable" msprop:Generator_TableVarName="tableVDEUDORES" msprop:Generator_TablePropName="VDEUDORES" msprop:Generator_RowDeletingName="VDEUDORESRowDeleting" msprop:Generator_RowChangingName="VDEUDORESRowChanging" msprop:Generator_RowEvHandlerName="VDEUDORESRowChangeEventHandler" msprop:Generator_RowDeletedName="VDEUDORESRowDeleted" msprop:Generator_UserTableName="VDEUDORES" msprop:Generator_RowChangedName="VDEUDORESRowChanged" msprop:Generator_RowEvArgName="VDEUDORESRowChangeEvent" msprop:Generator_RowClassName="VDEUDORESRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NID_CLIENTE" msprop:Generator_ColumnVarNameInTable="columnNID_CLIENTE" msprop:Generator_ColumnPropNameInRow="NID_CLIENTE" msprop:Generator_ColumnPropNameInTable="NID_CLIENTEColumn" msprop:Generator_UserColumnName="NID_CLIENTE" type="xs:int" minOccurs="0" />
@@ -1393,7 +1428,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VDEUDORES_SOLOS" msprop:Generator_TableClassName="VDEUDORES_SOLOSDataTable" msprop:Generator_TableVarName="tableVDEUDORES_SOLOS" msprop:Generator_RowChangedName="VDEUDORES_SOLOSRowChanged" msprop:Generator_TablePropName="VDEUDORES_SOLOS" msprop:Generator_RowDeletingName="VDEUDORES_SOLOSRowDeleting" msprop:Generator_RowChangingName="VDEUDORES_SOLOSRowChanging" msprop:Generator_RowEvHandlerName="VDEUDORES_SOLOSRowChangeEventHandler" msprop:Generator_RowDeletedName="VDEUDORES_SOLOSRowDeleted" msprop:Generator_RowClassName="VDEUDORES_SOLOSRow" msprop:Generator_UserTableName="VDEUDORES_SOLOS" msprop:Generator_RowEvArgName="VDEUDORES_SOLOSRowChangeEvent">
+        <xs:element name="VDEUDORES_SOLOS" msprop:Generator_TableClassName="VDEUDORES_SOLOSDataTable" msprop:Generator_TableVarName="tableVDEUDORES_SOLOS" msprop:Generator_TablePropName="VDEUDORES_SOLOS" msprop:Generator_RowDeletingName="VDEUDORES_SOLOSRowDeleting" msprop:Generator_RowChangingName="VDEUDORES_SOLOSRowChanging" msprop:Generator_RowEvHandlerName="VDEUDORES_SOLOSRowChangeEventHandler" msprop:Generator_RowDeletedName="VDEUDORES_SOLOSRowDeleted" msprop:Generator_UserTableName="VDEUDORES_SOLOS" msprop:Generator_RowChangedName="VDEUDORES_SOLOSRowChanged" msprop:Generator_RowEvArgName="VDEUDORES_SOLOSRowChangeEvent" msprop:Generator_RowClassName="VDEUDORES_SOLOSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CLIENTE" msprop:Generator_ColumnVarNameInTable="columnCLIENTE" msprop:Generator_ColumnPropNameInRow="CLIENTE" msprop:Generator_ColumnPropNameInTable="CLIENTEColumn" msprop:Generator_UserColumnName="CLIENTE" minOccurs="0">
@@ -1420,7 +1455,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VINVENTARIO" msprop:Generator_TableClassName="VINVENTARIODataTable" msprop:Generator_TableVarName="tableVINVENTARIO" msprop:Generator_RowChangedName="VINVENTARIORowChanged" msprop:Generator_TablePropName="VINVENTARIO" msprop:Generator_RowDeletingName="VINVENTARIORowDeleting" msprop:Generator_RowChangingName="VINVENTARIORowChanging" msprop:Generator_RowEvHandlerName="VINVENTARIORowChangeEventHandler" msprop:Generator_RowDeletedName="VINVENTARIORowDeleted" msprop:Generator_RowClassName="VINVENTARIORow" msprop:Generator_UserTableName="VINVENTARIO" msprop:Generator_RowEvArgName="VINVENTARIORowChangeEvent">
+        <xs:element name="VINVENTARIO" msprop:Generator_TableClassName="VINVENTARIODataTable" msprop:Generator_TableVarName="tableVINVENTARIO" msprop:Generator_TablePropName="VINVENTARIO" msprop:Generator_RowDeletingName="VINVENTARIORowDeleting" msprop:Generator_RowChangingName="VINVENTARIORowChanging" msprop:Generator_RowEvHandlerName="VINVENTARIORowChangeEventHandler" msprop:Generator_RowDeletedName="VINVENTARIORowDeleted" msprop:Generator_UserTableName="VINVENTARIO" msprop:Generator_RowChangedName="VINVENTARIORowChanged" msprop:Generator_RowEvArgName="VINVENTARIORowChangeEvent" msprop:Generator_RowClassName="VINVENTARIORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCPRODUCTO" msprop:Generator_ColumnPropNameInRow="CPRODUCTO" msprop:Generator_ColumnPropNameInTable="CPRODUCTOColumn" msprop:Generator_UserColumnName="CPRODUCTO">
@@ -1463,7 +1498,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VPROVEEDORES" msprop:Generator_TableClassName="VPROVEEDORESDataTable" msprop:Generator_TableVarName="tableVPROVEEDORES" msprop:Generator_RowChangedName="VPROVEEDORESRowChanged" msprop:Generator_TablePropName="VPROVEEDORES" msprop:Generator_RowDeletingName="VPROVEEDORESRowDeleting" msprop:Generator_RowChangingName="VPROVEEDORESRowChanging" msprop:Generator_RowEvHandlerName="VPROVEEDORESRowChangeEventHandler" msprop:Generator_RowDeletedName="VPROVEEDORESRowDeleted" msprop:Generator_RowClassName="VPROVEEDORESRow" msprop:Generator_UserTableName="VPROVEEDORES" msprop:Generator_RowEvArgName="VPROVEEDORESRowChangeEvent">
+        <xs:element name="VPROVEEDORES" msprop:Generator_TableClassName="VPROVEEDORESDataTable" msprop:Generator_TableVarName="tableVPROVEEDORES" msprop:Generator_TablePropName="VPROVEEDORES" msprop:Generator_RowDeletingName="VPROVEEDORESRowDeleting" msprop:Generator_RowChangingName="VPROVEEDORESRowChanging" msprop:Generator_RowEvHandlerName="VPROVEEDORESRowChangeEventHandler" msprop:Generator_RowDeletedName="VPROVEEDORESRowDeleted" msprop:Generator_UserTableName="VPROVEEDORES" msprop:Generator_RowChangedName="VPROVEEDORESRowChanged" msprop:Generator_RowEvArgName="VPROVEEDORESRowChangeEvent" msprop:Generator_RowClassName="VPROVEEDORESRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1484,7 +1519,7 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VVENTAS" msprop:Generator_TableClassName="VVENTASDataTable" msprop:Generator_TableVarName="tableVVENTAS" msprop:Generator_RowChangedName="VVENTASRowChanged" msprop:Generator_TablePropName="VVENTAS" msprop:Generator_RowDeletingName="VVENTASRowDeleting" msprop:Generator_RowChangingName="VVENTASRowChanging" msprop:Generator_RowEvHandlerName="VVENTASRowChangeEventHandler" msprop:Generator_RowDeletedName="VVENTASRowDeleted" msprop:Generator_RowClassName="VVENTASRow" msprop:Generator_UserTableName="VVENTAS" msprop:Generator_RowEvArgName="VVENTASRowChangeEvent">
+        <xs:element name="VVENTAS" msprop:Generator_TableClassName="VVENTASDataTable" msprop:Generator_TableVarName="tableVVENTAS" msprop:Generator_TablePropName="VVENTAS" msprop:Generator_RowDeletingName="VVENTASRowDeleting" msprop:Generator_RowChangingName="VVENTASRowChanging" msprop:Generator_RowEvHandlerName="VVENTASRowChangeEventHandler" msprop:Generator_RowDeletedName="VVENTASRowDeleted" msprop:Generator_UserTableName="VVENTAS" msprop:Generator_RowChangedName="VVENTASRowChanged" msprop:Generator_RowEvArgName="VVENTASRowChangeEvent" msprop:Generator_RowClassName="VVENTASRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PRODUCTO" msprop:Generator_ColumnVarNameInTable="columnPRODUCTO" msprop:Generator_ColumnPropNameInRow="PRODUCTO" msprop:Generator_ColumnPropNameInTable="PRODUCTOColumn" msprop:Generator_UserColumnName="PRODUCTO">
@@ -1511,6 +1546,53 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
                 </xs:simpleType>
               </xs:element>
               <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VVENTAS_DIA" msprop:Generator_TableClassName="VVENTAS_DIADataTable" msprop:Generator_TableVarName="tableVVENTAS_DIA" msprop:Generator_TablePropName="VVENTAS_DIA" msprop:Generator_RowDeletingName="VVENTAS_DIARowDeleting" msprop:Generator_RowChangingName="VVENTAS_DIARowChanging" msprop:Generator_RowEvHandlerName="VVENTAS_DIARowChangeEventHandler" msprop:Generator_RowDeletedName="VVENTAS_DIARowDeleted" msprop:Generator_UserTableName="VVENTAS_DIA" msprop:Generator_RowChangedName="VVENTAS_DIARowChanged" msprop:Generator_RowEvArgName="VVENTAS_DIARowChangeEvent" msprop:Generator_RowClassName="VVENTAS_DIARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DIA" msprop:Generator_ColumnVarNameInTable="columnDIA" msprop:Generator_ColumnPropNameInRow="DIA" msprop:Generator_ColumnPropNameInTable="DIAColumn" msprop:Generator_UserColumnName="DIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MES" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnPropNameInTable="MESColumn" msprop:Generator_UserColumnName="MES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VENTAS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVENTAS" msprop:Generator_ColumnPropNameInRow="VENTAS" msprop:Generator_ColumnPropNameInTable="VENTASColumn" msprop:Generator_UserColumnName="VENTAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="31" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VVENTAS_MES" msprop:Generator_TableClassName="VVENTAS_MESDataTable" msprop:Generator_TableVarName="tableVVENTAS_MES" msprop:Generator_TablePropName="VVENTAS_MES" msprop:Generator_RowDeletingName="VVENTAS_MESRowDeleting" msprop:Generator_RowChangingName="VVENTAS_MESRowChanging" msprop:Generator_RowEvHandlerName="VVENTAS_MESRowChangeEventHandler" msprop:Generator_RowDeletedName="VVENTAS_MESRowDeleted" msprop:Generator_UserTableName="VVENTAS_MES" msprop:Generator_RowChangedName="VVENTAS_MESRowChanged" msprop:Generator_RowEvArgName="VVENTAS_MESRowChangeEvent" msprop:Generator_RowClassName="VVENTAS_MESRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MES" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnPropNameInTable="MESColumn" msprop:Generator_UserColumnName="MES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VENTAS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVENTAS" msprop:Generator_ColumnPropNameInRow="VENTAS" msprop:Generator_ColumnPropNameInTable="VENTASColumn" msprop:Generator_UserColumnName="VENTAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="31" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1563,14 +1645,14 @@ SELECT NID_VENTA, NID_PRODUCTO, NID_CLIENTE, NCANTIDAD, BDEUDA, BHABILITADO, DFE
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_NID_CLIENTE2" msdata:parent="CAT_PROVEEDORES" msdata:child="TBL_COMPRAS" msdata:parentkey="NID_PROVEEDOR" msdata:childkey="NID_PROVEEDOR" msprop:Generator_UserChildTable="TBL_COMPRAS" msprop:Generator_ChildPropName="GetTBL_COMPRASRows" msprop:Generator_UserRelationName="FK_NID_CLIENTE2" msprop:Generator_RelationVarName="relationFK_NID_CLIENTE2" msprop:Generator_UserParentTable="CAT_PROVEEDORES" msprop:Generator_ParentPropName="CAT_PROVEEDORESRow" />
-      <msdata:Relationship name="FK_NID_PRODUCTO3" msdata:parent="TBL_PRODUCTOS" msdata:child="TBL_COMPRAS" msdata:parentkey="NID_PRODUCTO" msdata:childkey="NID_PRODUCTO" msprop:Generator_UserChildTable="TBL_COMPRAS" msprop:Generator_ChildPropName="GetTBL_COMPRASRows" msprop:Generator_UserRelationName="FK_NID_PRODUCTO3" msprop:Generator_ParentPropName="TBL_PRODUCTOSRow" msprop:Generator_RelationVarName="relationFK_NID_PRODUCTO3" msprop:Generator_UserParentTable="TBL_PRODUCTOS" />
-      <msdata:Relationship name="FK_NID_COMPAÑIA" msdata:parent="CAT_COMPAÑIAS" msdata:child="TBL_MARCAS" msdata:parentkey="NID_COMPAÑIA" msdata:childkey="NID_COMPAÑIA" msprop:Generator_UserChildTable="TBL_MARCAS" msprop:Generator_ChildPropName="GetTBL_MARCASRows" msprop:Generator_UserRelationName="FK_NID_COMPAÑIA" msprop:Generator_RelationVarName="relationFK_NID_COMPAÑIA" msprop:Generator_UserParentTable="CAT_COMPAÑIAS" msprop:Generator_ParentPropName="CAT_COMPAÑIASRow" />
-      <msdata:Relationship name="FK_NID_MARCA" msdata:parent="TBL_MARCAS" msdata:child="TBL_PRODUCTOS" msdata:parentkey="NID_MARCA" msdata:childkey="NID_MARCA" msprop:Generator_UserChildTable="TBL_PRODUCTOS" msprop:Generator_ChildPropName="GetTBL_PRODUCTOSRows" msprop:Generator_UserRelationName="FK_NID_MARCA" msprop:Generator_RelationVarName="relationFK_NID_MARCA" msprop:Generator_UserParentTable="TBL_MARCAS" msprop:Generator_ParentPropName="TBL_MARCASRow" />
-      <msdata:Relationship name="FK_NID_PROVEEDOR" msdata:parent="CAT_PROVEEDORES" msdata:child="TBL_PRODUCTOS" msdata:parentkey="NID_PROVEEDOR" msdata:childkey="NID_PROVEEDOR" msprop:Generator_UserChildTable="TBL_PRODUCTOS" msprop:Generator_ChildPropName="GetTBL_PRODUCTOSRows" msprop:Generator_UserRelationName="FK_NID_PROVEEDOR" msprop:Generator_RelationVarName="relationFK_NID_PROVEEDOR" msprop:Generator_UserParentTable="CAT_PROVEEDORES" msprop:Generator_ParentPropName="CAT_PROVEEDORESRow" />
-      <msdata:Relationship name="FK_NID_TIPO_PRODUCTO" msdata:parent="CAT_TIPO_PRODUCTOS" msdata:child="TBL_PRODUCTOS" msdata:parentkey="NID_TIPO_PRODUCTO" msdata:childkey="NID_TIPO_PRODUCTO" msprop:Generator_UserChildTable="TBL_PRODUCTOS" msprop:Generator_ChildPropName="GetTBL_PRODUCTOSRows" msprop:Generator_UserRelationName="FK_NID_TIPO_PRODUCTO" msprop:Generator_RelationVarName="relationFK_NID_TIPO_PRODUCTO" msprop:Generator_UserParentTable="CAT_TIPO_PRODUCTOS" msprop:Generator_ParentPropName="CAT_TIPO_PRODUCTOSRow" />
-      <msdata:Relationship name="FK_NID_CLIENTE" msdata:parent="CAT_CLIENTES" msdata:child="TBL_VENTAS" msdata:parentkey="NID_CLIENTE" msdata:childkey="NID_CLIENTE" msprop:Generator_UserChildTable="TBL_VENTAS" msprop:Generator_ChildPropName="GetTBL_VENTASRows" msprop:Generator_UserRelationName="FK_NID_CLIENTE" msprop:Generator_RelationVarName="relationFK_NID_CLIENTE" msprop:Generator_UserParentTable="CAT_CLIENTES" msprop:Generator_ParentPropName="CAT_CLIENTESRow" />
-      <msdata:Relationship name="FK_NID_PRODUCTO2" msdata:parent="TBL_PRODUCTOS" msdata:child="TBL_VENTAS" msdata:parentkey="NID_PRODUCTO" msdata:childkey="NID_PRODUCTO" msprop:Generator_UserChildTable="TBL_VENTAS" msprop:Generator_ChildPropName="GetTBL_VENTASRows" msprop:Generator_UserRelationName="FK_NID_PRODUCTO2" msprop:Generator_RelationVarName="relationFK_NID_PRODUCTO2" msprop:Generator_UserParentTable="TBL_PRODUCTOS" msprop:Generator_ParentPropName="TBL_PRODUCTOSRow" />
+      <msdata:Relationship name="FK_NID_CLIENTE2" msdata:parent="CAT_PROVEEDORES" msdata:child="TBL_COMPRAS" msdata:parentkey="NID_PROVEEDOR" msdata:childkey="NID_PROVEEDOR" msprop:Generator_UserChildTable="TBL_COMPRAS" msprop:Generator_ChildPropName="GetTBL_COMPRASRows" msprop:Generator_UserRelationName="FK_NID_CLIENTE2" msprop:Generator_ParentPropName="CAT_PROVEEDORESRow" msprop:Generator_RelationVarName="relationFK_NID_CLIENTE2" msprop:Generator_UserParentTable="CAT_PROVEEDORES" />
+      <msdata:Relationship name="FK_NID_PRODUCTO3" msdata:parent="TBL_PRODUCTOS" msdata:child="TBL_COMPRAS" msdata:parentkey="NID_PRODUCTO" msdata:childkey="NID_PRODUCTO" msprop:Generator_UserChildTable="TBL_COMPRAS" msprop:Generator_ChildPropName="GetTBL_COMPRASRows" msprop:Generator_UserRelationName="FK_NID_PRODUCTO3" msprop:Generator_RelationVarName="relationFK_NID_PRODUCTO3" msprop:Generator_UserParentTable="TBL_PRODUCTOS" msprop:Generator_ParentPropName="TBL_PRODUCTOSRow" />
+      <msdata:Relationship name="FK_NID_COMPAÑIA" msdata:parent="CAT_COMPAÑIAS" msdata:child="TBL_MARCAS" msdata:parentkey="NID_COMPAÑIA" msdata:childkey="NID_COMPAÑIA" msprop:Generator_UserChildTable="TBL_MARCAS" msprop:Generator_ChildPropName="GetTBL_MARCASRows" msprop:Generator_UserRelationName="FK_NID_COMPAÑIA" msprop:Generator_ParentPropName="CAT_COMPAÑIASRow" msprop:Generator_RelationVarName="relationFK_NID_COMPAÑIA" msprop:Generator_UserParentTable="CAT_COMPAÑIAS" />
+      <msdata:Relationship name="FK_NID_MARCA" msdata:parent="TBL_MARCAS" msdata:child="TBL_PRODUCTOS" msdata:parentkey="NID_MARCA" msdata:childkey="NID_MARCA" msprop:Generator_UserChildTable="TBL_PRODUCTOS" msprop:Generator_ChildPropName="GetTBL_PRODUCTOSRows" msprop:Generator_UserRelationName="FK_NID_MARCA" msprop:Generator_ParentPropName="TBL_MARCASRow" msprop:Generator_RelationVarName="relationFK_NID_MARCA" msprop:Generator_UserParentTable="TBL_MARCAS" />
+      <msdata:Relationship name="FK_NID_PROVEEDOR" msdata:parent="CAT_PROVEEDORES" msdata:child="TBL_PRODUCTOS" msdata:parentkey="NID_PROVEEDOR" msdata:childkey="NID_PROVEEDOR" msprop:Generator_UserChildTable="TBL_PRODUCTOS" msprop:Generator_ChildPropName="GetTBL_PRODUCTOSRows" msprop:Generator_UserRelationName="FK_NID_PROVEEDOR" msprop:Generator_ParentPropName="CAT_PROVEEDORESRow" msprop:Generator_RelationVarName="relationFK_NID_PROVEEDOR" msprop:Generator_UserParentTable="CAT_PROVEEDORES" />
+      <msdata:Relationship name="FK_NID_TIPO_PRODUCTO" msdata:parent="CAT_TIPO_PRODUCTOS" msdata:child="TBL_PRODUCTOS" msdata:parentkey="NID_TIPO_PRODUCTO" msdata:childkey="NID_TIPO_PRODUCTO" msprop:Generator_UserChildTable="TBL_PRODUCTOS" msprop:Generator_ChildPropName="GetTBL_PRODUCTOSRows" msprop:Generator_UserRelationName="FK_NID_TIPO_PRODUCTO" msprop:Generator_ParentPropName="CAT_TIPO_PRODUCTOSRow" msprop:Generator_RelationVarName="relationFK_NID_TIPO_PRODUCTO" msprop:Generator_UserParentTable="CAT_TIPO_PRODUCTOS" />
+      <msdata:Relationship name="FK_NID_CLIENTE" msdata:parent="CAT_CLIENTES" msdata:child="TBL_VENTAS" msdata:parentkey="NID_CLIENTE" msdata:childkey="NID_CLIENTE" msprop:Generator_UserChildTable="TBL_VENTAS" msprop:Generator_ChildPropName="GetTBL_VENTASRows" msprop:Generator_UserRelationName="FK_NID_CLIENTE" msprop:Generator_ParentPropName="CAT_CLIENTESRow" msprop:Generator_RelationVarName="relationFK_NID_CLIENTE" msprop:Generator_UserParentTable="CAT_CLIENTES" />
+      <msdata:Relationship name="FK_NID_PRODUCTO2" msdata:parent="TBL_PRODUCTOS" msdata:child="TBL_VENTAS" msdata:parentkey="NID_PRODUCTO" msdata:childkey="NID_PRODUCTO" msprop:Generator_UserChildTable="TBL_VENTAS" msprop:Generator_ChildPropName="GetTBL_VENTASRows" msprop:Generator_UserRelationName="FK_NID_PRODUCTO2" msprop:Generator_ParentPropName="TBL_PRODUCTOSRow" msprop:Generator_RelationVarName="relationFK_NID_PRODUCTO2" msprop:Generator_UserParentTable="TBL_PRODUCTOS" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

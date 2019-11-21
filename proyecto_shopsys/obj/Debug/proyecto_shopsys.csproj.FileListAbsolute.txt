@@ -23,3 +23,4 @@ C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_sho
 C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.Agregar_Producto.resources
 C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.Deudas_Cliente_Seleccionado.resources
 C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.NuevoCliente.resources
+C:\Users\Lenovo T450\Documents\5toSemestre\I.S\proyecto_shopsys (1)\proyecto_shopsys\obj\Debug\proyecto_shopsys.ventanaEliminar.resources
